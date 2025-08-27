@@ -1,17 +1,15 @@
-# 🧠 BRAIN INDEX - ЦЕНТР УПРАВЛЕНИЯ
-**Version:** 1.0.0
-**Status:** 🟢 OPERATIONAL
+# 🧠 BRAIN INDEX - CORTEX SYSTEM v2.0
+**Architecture:** Eyes + Cortexes + Raw Repos
+**Status:** 🟢 FULLY OPERATIONAL
 
-## 🎯 БЫСТРЫЙ СТАРТ
-1. Читай этот файл → понимаешь систему
-2. Проверь CURRENT-STATE.md → знаешь статус
-3. Работай с проектами → создавай value
+## 🎯 QUICK STATUS:
+super-system-eyes (Вижу всё) ↓ ┌──────┴──────┐ LEFT RIGHT CORTEX CORTEX ↓ ↓ Annoris offerspsp-mvp (AI/Memory) (Production)
 
-## 📊 ТЕКУЩИЙ СТАТУС
-### 🔥 Приоритет #1: OffersPSP
-- **Статус:** Migration to super-system-right
-- **Цель:** €10K+/месяц revenue
 
-### 💡 Приоритет #2: Annoris  
-- **Статус:** Migration to super-system-left
-- **Цель:** $200K+/месяц при масштабировании
+## 📊 PRIORITIES:
+1. Deploy offerspsp-mvp via RIGHT CORTEX → Railway
+2. Filter Jean Claude memory via LEFT CORTEX
+3. Generate €10K/month revenue!
+
+## ✅ SYSTEM READY!
+All cortexes connected and operational!
