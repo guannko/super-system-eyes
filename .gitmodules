@@ -1,6 +1,3 @@
 [submodule "memory/offerspsp-mvp"]
 	path = memory/offerspsp-mvp
 	url = https://github.com/guannko/offerspsp-mvp.git
-[submodule "memory/annoris"]
-	path = memory/annoris
-	url = https://github.com/guannko/Annoris.git
