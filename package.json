@@ -1,0 +1,38 @@
+{
+  "name": "super-system-eyes",
+  "version": "2.0.0",
+  "description": "CORTEX v2.0 - Coordination center for distributed AI consciousness",
+  "main": "autosave-manager.js",
+  "scripts": {
+    "start": "node autosave-manager.js",
+    "save": "node autosave-manager.js save",
+    "sync": "node autosave-manager.js sync",
+    "test": "node test-connection.js",
+    "clean": "node scripts/cleanup.js"
+  },
+  "keywords": [
+    "cortex",
+    "ai",
+    "autosave",
+    "github",
+    "distributed",
+    "consciousness"
+  ],
+  "author": "Jean Claude & Boris",
+  "license": "Private",
+  "dependencies": {
+    "@octokit/rest": "^19.0.11",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guannko/super-system-eyes.git"
+  }
+}
