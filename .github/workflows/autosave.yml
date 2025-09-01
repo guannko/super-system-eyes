@@ -1,0 +1,63 @@
+name: CORTEX Autosave System
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Каждые 30 минут
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Ручной запуск
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Run sync
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🔄 Starting CORTEX sync..."
+        node autosave-manager.js sync || echo "Sync skipped - no manager yet"
+        
+    - name: Update system state
+      run: |
+        echo "📊 Updating CURRENT-STATE.md..."
+        DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        echo "Last sync: $DATE" >> sync.log
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Automated sync - $(date -u +"%Y-%m-%d %H:%M")"
+        git push || echo "No changes to push"
+
+  cleanup:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 0 * * *'  # Ежедневно в полночь
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Clean old autosaves
+      run: |
+        echo "🧹 Cleaning old autosaves..."
+        find autosaves -name "*.md" -mtime +7 -delete || echo "No old files"
+        
+    - name: Compress logs
+      run: |
+        if [ -f sync.log ]; then
+          gzip -k sync.log
+          mv sync.log.gz logs/sync-$(date +%Y%m%d).log.gz
+        fi
