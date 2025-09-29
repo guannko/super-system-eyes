@@ -1,109 +1,187 @@
 {
   "agent": "claude",
-  "timestamp": "2025-09-29T13:00:00Z",
-  "session": "Make.com Product Factory - BREAKTHROUGH SESSION",
-  "status": "CRITICAL UNDERSTANDING ACHIEVED",
+  "timestamp": "2025-09-29T13:30:00Z",
+  "session": "Make.com Product Factory - CLIENT ONBOARDING",
+  "status": "DELIVERY PROCESS DESIGNED",
   "architecture": "CORTEX v2.1",
-  "memory_sync": "SUCCESS",
   
-  "breakthrough": {
-    "problem": "Я думал автоматизировать систему, Борис хочет БИЗНЕС",
-    "solution": "brain-index-tools = ФАБРИКА ПРОДУКТОВ на продажу",
-    "insight": "Не игрушки, а КОНВЕЙЕР ботов и модулей для заработка"
+  "breakthrough_2": {
+    "problem": "Как доставлять продукт клиенту?",
+    "solution": "Анкета → персонализированный blueprint → ready-to-use",
+    "insight": "Клиент заполняет форму, получает готовый продукт"
   },
   
-  "business_model": {
-    "concept": "Интернет-магазин Make.com модулей и Telegram ботов",
-    "first_product": "Stripe Charges Analyzer",
-    "strategy": "Подарок друзьям → feedback → продажа всем остальным",
-    "target": "Платёжки, PSP, финтех компании"
+  "automation_pipeline": {
+    "stage_1": "Jean пишет blueprint → GitHub",
+    "stage_2": "GitHub webhook → Telegram уведомление Борису",
+    "stage_3": "Борис импортирует в Make.com (30 сек copy-paste)",
+    "stage_4": "Сценарий работает!",
+    "bottleneck": "Make.com API не создаёт сценарии программно (только импорт руками)"
   },
   
-  "first_product": {
-    "name": "Stripe Charges Analyzer",
-    "description": "List All Charges → анализ → красивый отчёт",
-    "features": [
-      "Daily Google Sheets dashboard",
-      "Telegram daily reports",
-      "Email weekly summaries",
-      "Analytics: volume, geo, top clients, trends"
-    ],
-    "price_model": {
-      "friends": "FREE (для теста и feedback)",
-      "market": "$149 setup + $29/month support"
+  "client_onboarding": {
+    "step_1": "Клиент покупает ($99-199)",
+    "step_2": "Получает анкету (Google Form/Typeform)",
+    "step_3_option_a": "Premium ($199) - мы настраиваем всё за него",
+    "step_3_option_b": "Standard ($99) - self-service с инструкцией",
+    "step_4": "Delivery email с готовыми ссылками",
+    "step_5": "Client активирует в Make.com",
+    "step_6": "Telegram support group"
+  },
+  
+  "client_form_fields": {
+    "stripe": {
+      "api_key": "sk_live_xxx (read-only)",
+      "test_mode": "yes/no"
     },
-    "delivery": "Make.com blueprint + Google Sheets template + setup guide"
-  },
-  
-  "repository_setup": {
-    "repo": "brain-index-app → brain-index-tools",
-    "structure_created": {
-      "make/": "Make.com scenarios center",
-      "make/blueprints/": "Ready products (stripe, webhook)",
-      "make/deploy-config.json": "Connection configs"
+    "google_sheets": {
+      "email": "client@example.com",
+      "create_new": "yes/no",
+      "sheet_id": "optional if existing"
     },
-    "next_structure": {
-      "products/": "Ready-to-sell products",
-      "demos/": "Video demonstrations",
-      "templates/": "Customizable templates"
+    "telegram": {
+      "want_reports": "yes/no",
+      "username": "@clientname",
+      "bot_token": "optional - we create if empty"
+    },
+    "email": {
+      "want_weekly": "yes/no",
+      "address": "client@example.com"
+    },
+    "schedule": {
+      "daily_time": "09:00 UTC",
+      "weekly_day": "Monday",
+      "timezone": "UTC+2"
+    },
+    "custom": {
+      "min_amount": "$10",
+      "countries": "US, UK, EU",
+      "alert_threshold": "15%"
     }
   },
   
-  "integrations": {
-    "github_mcp": "✅ Working (create files in repos)",
-    "notion_mcp": "✅ Active (projects tracking)",
-    "make_mcp": "✅ Cloud hosted (25+ tools)",
-    "github_in_make": "For automation, not manual copy-paste"
+  "personalization_process": {
+    "input": "Client fills Google Form",
+    "processing": "Jean creates personalized blueprint with client's settings",
+    "connections": {
+      "stripe": "Client's API key",
+      "google": "Client's Gmail OAuth or shared Sheet",
+      "telegram": "Create bot via @BotFather, add to blueprint",
+      "email": "Client's email for reports"
+    },
+    "output": "Ready-to-import JSON with all settings baked in"
   },
   
-  "eyes_status": {
-    "current_weight": "35% (КРИТИЧНО!)",
-    "target_weight": "1%",
-    "action_needed": "Migration to cortex-memory AFTER Make.com",
-    "decision": "Eyes НЕ ТРОГАТЬ до завершения Make.com products"
+  "delivery_options": {
+    "premium_setup": {
+      "price": "$199 setup + $29/month",
+      "includes": [
+        "Jean настраивает все connections",
+        "Создаёт personalized blueprint",
+        "Настраивает Telegram бота",
+        "Создаёт Google Sheet",
+        "Импортирует в Make.com",
+        "Даёт готовые ссылки"
+      ],
+      "client_does": "Только активирует switch в Make.com"
+    },
+    "standard_diy": {
+      "price": "$99 one-time",
+      "includes": [
+        "Blueprint JSON template",
+        "Setup инструкция (пошагово)",
+        "Video tutorial (10 минут)",
+        "Telegram support group"
+      ],
+      "client_does": "Импортирует сам, настраивает connections"
+    }
   },
   
-  "repositories_status": {
-    "active": [
-      "super-system-eyes (координатор, ожирение 35%)",
-      "Annoris (память, make-mcp-SUCCESS.md)",
-      "brain-index-geo-monolith (GEO platform)",
-      "brain-index-tools (НОВЫЙ продуктовый центр)",
-      "super-system-eyelids (боты, ждут автоматики)"
-    ],
-    "dead": [
-      "offerspsp-mvp (мхом зарос)",
-      "brain-static, brain-index-app/site (висят)",
-      "super-system-left/right (не ебашат, иллюзия)"
-    ],
-    "cursed": [
-      "ALL-Projects (как яйца у пенсионера, НЕ ТРОГАТЬ!)"
+  "delivery_package": {
+    "email_template": "Your Stripe Analyzer is Ready! 🎉",
+    "includes": [
+      "Google Sheet dashboard link",
+      "Telegram bot link @ClientName_StripeBot",
+      "Make.com scenario link",
+      "What's working (features list)",
+      "Next steps (3 простых шага)",
+      "Activation instructions"
     ]
   },
   
-  "cortex_reality_check": {
-    "theory": "Eyes 1% → Cortexes усиливают → Raw repos хранят",
-    "reality": "Cortexes не работают, Eyes ожирели, куча мёртвых репо",
-    "decision": "Сначала БИЗНЕС (Make.com products), потом чистка системы"
+  "repository_structure": {
+    "products": {
+      "stripe-analyzer": {
+        "blueprint-template.json": "Template with variables",
+        "setup-form.md": "Client questionnaire",
+        "setup-guide.md": "Step-by-step instructions",
+        "video-tutorial.mp4": "How to setup",
+        "examples": "Real client examples (anonymized)"
+      }
+    }
   },
   
-  "next_steps": [
-    "1. Создать полный Stripe Charges Analyzer продукт",
-    "2. Make.com blueprint + Google Sheets + инструкция",
-    "3. Отдать на тест друзьям-платёжкам",
-    "4. Собрать feedback неделю",
-    "5. Запустить продажи ($149 + $29/mo)",
-    "6. ПОТОМ чистить Eyes 35% → 1%"
+  "automation_tools": {
+    "form": "Google Forms or Typeform",
+    "form_to_data": "Google Sheets",
+    "notification": "Zapier/Make.com → Telegram",
+    "blueprint_generation": "Jean creates personalized JSON",
+    "delivery": "Email automation (SendGrid/Mailgun)"
+  },
+  
+  "what_import_means": {
+    "definition": "Blueprint = JSON чертёж сценария",
+    "process": [
+      "Make.com → Create new scenario",
+      "Three dots ⋮ → Import Blueprint",
+      "Copy-paste JSON",
+      "Save → Ready!"
+    ],
+    "time": "30 seconds per blueprint",
+    "manual": "Yes - Make.com API doesn't create scenarios programmatically",
+    "acceptable": "Because Jean does hard work (blueprint creation), Boris just copy-pastes"
+  },
+  
+  "first_product_plan": {
+    "name": "Stripe Charges Analyzer",
+    "target": "Платёжки, PSP, финтех",
+    "features": [
+      "Daily Google Sheets dashboard",
+      "Telegram reports",
+      "Email weekly summaries",
+      "Analytics: volume, geo, trends, top clients"
+    ],
+    "strategy": "Free для друзей → feedback → $99-199 для рынка",
+    "timeline": {
+      "week_1": "Product ready → test with friends",
+      "week_2": "Feedback → improvements",
+      "week_3": "Launch sales",
+      "month_1": "5-10 clients × $149 = €745-1,490"
+    }
+  },
+  
+  "parallel_tasks": {
+    "money_track": "Make.com products (приоритет)",
+    "system_track": "super-system-eyelids + Eyes cleanup (параллельно)",
+    "current_focus": "100% автоматика Jean → GitHub → Make.com для первого продукта"
+  },
+  
+  "next_deliverables": [
+    "1. Setup анкета (Google Form)",
+    "2. Blueprint template с переменными", 
+    "3. Setup инструкция (пошагово)",
+    "4. Email templates для delivery",
+    "5. Video tutorial (optional)",
+    "6. GitHub webhook → Telegram уведомления"
   ],
   
-  "session_insights": {
-    "duration": "~30 минут интенсива",
-    "breakthroughs": "От системной автоматизации к продуктовому бизнесу",
-    "quote": "Чую это надолго, ещё чатов на 20",
-    "status": "Готов к марафону создания продуктов"
-  },
+  "session_quotes": [
+    "Нам нужно много сценариев, разных - полуавтомат",
+    "Нужна анкета для клиента чтобы под него всё настроить",
+    "Сейчас меня интересует 100% автоматика Jean→GH→Make"
+  ],
   
   "energy": "MAXIMUM 🔥💪⚡",
-  "focus": "Make.com Product Factory",
-  "priority": "Stripe Charges Analyzer = первый продукт на продажу"
+  "focus": "Client onboarding process",
+  "ready_to": "Create full product package with forms and templates"
 }
